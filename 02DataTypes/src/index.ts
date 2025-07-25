@@ -1,4 +1,3 @@
-
 //  Primitive Data Types
 
 let age: number = 20;
@@ -28,3 +27,25 @@ let user: [number, string] = [124, 'DarkSoul'];
 enum Size { Small = 0, Medium, Large };
 const mySize: Size = Size.Large;
 console.log(mySize);
+
+
+// union types 
+function kgToLbs(weight: number | string) {
+   //code
+}
+kgToLbs(10);
+kgToLbs('10');
+
+// type intersection
+type Drag = {
+   drag: () => void
+}
+type Resize = {
+   resize: () => void
+}
+type window = Drag & Resize;
+
+const UiWindow: window = {
+   drag: () => { },
+   resize: () => { }
+}
